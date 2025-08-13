@@ -1,0 +1,66 @@
+.App {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EAEBEF;
+  }
+  .grid {
+    display: grid;
+    justify-content: center;
+  }
+  
+  .p-2 {
+    display: flex;
+    justify-content: center;
+  }
+  /* Hide all list items by default when the screen width is less than 600px */
+  @media (max-width: 599px) {
+    .list-item {
+      width: 100%;
+    }
+  }
+  .full-width {
+    width: 100%;
+  }
+  .scrollable-list {
+    display: flex;
+   
+    overflow-x: scroll;
+   
+    height: 600px;
+    
+    width: 100%;
+    padding: 10px;
+    background-color: #EAEBEF;
+  
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+  
+    /* Hide scrollbar for Internet Explorer and Edge */
+    -ms-overflow-style: none;
+  }
+  
+  .list-item {
+    flex: 0 0 200px;
+    height: 100%;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: #EAEBEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .list-item:last-child {
+    margin-right: 0;
+  }

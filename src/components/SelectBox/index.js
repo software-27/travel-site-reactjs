@@ -1,0 +1,402 @@
+import { ErrorMessage } from "../ErrorMessage/index.js";
+import React from "react";
+import Select from "react-select";
+import PropTypes from "prop-types";
+
+const selectOptions = [
+  { value: "1", label: "Afghanistan" },
+  { value: "2", label: "Albania" },
+  { value: "3", label: "Algeria" },
+  { value: "4", label: "American Samoa" },
+  { value: "5", label: "Andorra" },
+  { value: "6", label: "Angola" },
+  { value: "7", label: "Anguilla" },
+  { value: "8", label: "Albania" },
+  { value: "9", label: "Antarctica" },
+  { value: "10", label: "Antigua and Barbuda" },
+  { value: "11", label: "Argentina" },
+  { value: "12", label: "Armenia" },
+  { value: "13", label: "Aruba" },
+  { value: "14", label: "Australia" },
+  { value: "15", label: "Azerbaijan" },
+  { value: "16", label: "Bahamas" },
+  { value: "17", label: "Bahrain" },
+  { value: "18", label: "Bangladesh" },
+  { value: "19", label: "Barbados" },
+  { value: "20", label: "Belarus" },
+  { value: "21", label: "Belgium" },
+  { value: "22", label: "Belize" },
+  { value: "23", label: "Benin" },
+  { value: "24", label: "Bermuda" },
+  { value: "25", label: "	Bhutan" },
+  { value: "26", label: "Bolivia" },
+  { value: "27", label: "Bosnia and Herzegovina" },
+  { value: "28", label: "Botswana" },
+  { value: "29", label: "Brazil" },
+  { value: "30", label: "Brunei Darussalam" },
+  { value: "31", label: "Bulgaria" },
+  { value: "32", label: "Burkina Faso" },
+  { value: "33", label: "Burundi" },
+  { value: "34", label: "Cambodia" },
+  { value: "35", label: "Cameroon" },
+  { value: "36", label: "Canada" },
+  { value: "37", label: "Cape Verde" },
+  { value: "38", label: "Cayman Islands" },
+  { value: "39", label: "Central African Republic" },
+  { value: "40", label: "Chad" },
+  { value: "41", label: "Chile" },
+  { value: "42", label: "China" },
+  { value: "43", label: "Christmas Island" },
+  { value: "44", label: "Cocos (Keeling) Islands" },
+  { value: "45", label: "Colombia" },
+  { value: "46", label: "Comoros" },
+  { value: "47", label: "Democratic Republic of the Congo (Kinshasa)" },
+  { value: "48", label: "Congo, Republic of (Brazzaville)" },
+  { value: "49", label: "Cook Islands" },
+  { value: "50", label: "Costa Rica" },
+  { value: "51", label: "Côte D'ivoire (Ivory Coast)" },
+  { value: "52", label: "Croatia" },
+  { value: "53", label: "Cuba" },
+  { value: "54", label: "Cyprus" },
+  { value: "55", label: "Czech Republic" },
+  { value: "56", label: "Denmark" },
+  { value: "57", label: "Djibouti" },
+  { value: "58", label: "Dominica" },
+  { value: "59", label: "Dominican Republic" },
+  { value: "60", label: "East Timor (Timor-Leste)" },
+  { value: "61", label: "Ecuador" },
+  { value: "62", label: "AustrEgyptalia" },
+  { value: "63", label: "El Salvador" },
+  { value: "64", label: "Equatorial Guinea" },
+  { value: "65", label: "Eritrea" },
+  { value: "66", label: "Estonia" },
+  { value: "67", label: "Ethiopia" },
+  { value: "68", label: "Falkland Islands" },
+  { value: "69", label: "Faroe Islands" },
+  { value: "70", label: "Fiji" },
+  { value: "71", label: "Finland" },
+  { value: "72", label: "France" },
+  { value: "73", label: "French Guiana" },
+  { value: "74", label: "French Polynesia" },
+  { value: "75", label: "French Southern Territories" },
+  { value: "76", label: "Gabon" },
+  { value: "77", label: "The Gambia" },
+  { value: "78", label: "Georgia" },
+  { value: "79", label: "Germany" },
+  { value: "80", label: "Ghana" },
+  { value: "81", label: "Gibraltar" },
+  { value: "82", label: "Greece" },
+  { value: "83", label: "Greenland" },
+  { value: "84", label: "Grenada" },
+  { value: "85", label: "Guadeloupe" },
+  { value: "86", label: "Guam" },
+  { value: "87", label: "Guatemala" },
+  { value: "88", label: "Guinea" },
+  { value: "89", label: "Guinea-Bissau" },
+  { value: "90", label: "Guyana" },
+  { value: "91", label: "Haiti" },
+  { value: "92", label: "Holy See" },
+  { value: "93", label: "Honduras" },
+  { value: "94", label: "Hong Kong" },
+  { value: "95", label: "Hungary" },
+  { value: "96", label: "Iceland" },
+  { value: "97", label: "India" },
+  { value: "98", label: "Indonesia" },
+  { value: "99", label: "Iran" },
+  { value: "100", label: "Iraq" },
+  { value: "101", label: "Ireland" },
+  { value: "102", label: "Israel" },
+  { value: "103", label: "Italy" },
+  { value: "104", label: "Ivory Coast" },
+  { value: "105", label: "Jamaica" },
+  { value: "106", label: "Japan" },
+  { value: "107", label: "Jordan" },
+  { value: "108", label: "Kazakhstan" },
+  { value: "109", label: "Kenya" },
+  { value: "110", label: "Kiribati" },
+  { value: "111", label: "Korea(North Korea)" },
+  { value: "112", label: "Korea(South Korea)" },
+  { value: "113", label: "Kosovo" },
+  { value: "114", label: "Kuwait" },
+  { value: "115", label: "Kyrgyzstan" },
+  { value: "116", label: "Lao" },
+  { value: "117", label: "Latvia" },
+  { value: "118", label: "Lebanon" },
+  { value: "119", label: "Lesotho" },
+  { value: "120", label: "Liberia" },
+  { value: "121", label: "Libya" },
+  { value: "122", label: "Liechtenstein" },
+  { value: "123", label: "Lithuania" },
+  { value: "124", label: "Luxembourg" },
+  { value: "125", label: "Macau" },
+  { value: "126", label: "Madagascar" },
+  { value: "127", label: "Malawi" },
+  { value: "128", label: "Malaysia" },
+  { value: "129", label: "Maldives" },
+  { value: "130", label: "Mali" },
+  { value: "131", label: "Malta" },
+  { value: "132", label: "Marshall Islands" },
+  { value: "133", label: "Martinique" },
+  { value: "134", label: "Mauritania" },
+  { value: "135", label: "Mauritius" },
+  { value: "136", label: "Mayotte" },
+  { value: "137", label: "Mexico" },
+  { value: "138", label: "Micronesia" },
+  { value: "139", label: "Moldova" },
+  { value: "140", label: "Monaco" },
+  { value: "141", label: "Mongolia" },
+  { value: "142", label: "Montenegro" },
+  { value: "143", label: "Montserrat" },
+  { value: "144", label: "Morocco" },
+  { value: "145", label: "Mozambique" },
+  { value: "146", label: "Myanmar, Burma" },
+  { value: "147", label: "Namibia" },
+  { value: "148", label: "Nauru" },
+  { value: "149", label: "Nepal" },
+  { value: "150", label: "Netherlands" },
+  { value: "151", label: "New Caledonia" },
+  { value: "152", label: "New Zealand" },
+  { value: "153", label: "Nicaragua" },
+  { value: "154", label: "Niger" },
+  { value: "155", label: "Nigeria" },
+  { value: "156", label: "Niue" },
+  { value: "157", label: "North Macedonia" },
+  { value: "158", label: "AusNorthern Mariana Islandstralia" },
+  { value: "159", label: "Norway" },
+  { value: "160", label: "Oman" },
+  { value: "161", label: "Pakistan" },
+  { value: "162", label: "Palau" },
+  { value: "163", label: "Palestinian territories" },
+  { value: "164", label: "Panama" },
+  { value: "165", label: "Papua New Guinea" },
+  { value: "166", label: "Paraguay" },
+  { value: "167", label: "Peru" },
+  { value: "168", label: "Philippines" },
+  { value: "169", label: "Pitcairn Island" },
+  { value: "170", label: "Poland" },
+  { value: "171", label: "Portugal" },
+  { value: "172", label: "Puerto Rico" },
+  { value: "173", label: "Qatar" },
+  { value: "174", label: "Reunion Island" },
+  { value: "175", label: "Romania" },
+  { value: "176", label: "Russian Federation" },
+  { value: "177", label: "Rwanda" },
+  { value: "178", label: "Saint Kitts and Nevis" },
+  { value: "179", label: "Saint Lucia" },
+  { value: "180", label: "Saint Vincent and the Grenadines" },
+  { value: "181", label: "Samoa" },
+  { value: "182", label: "San Marino" },
+  { value: "183", label: "Sao Tome and Principe" },
+  { value: "184", label: "Saudi Arabia" },
+  { value: "185", label: "Senegal" },
+  { value: "186", label: "Serbia" },
+  { value: "187", label: "Seychelles" },
+  { value: "188", label: "Sierra Leone" },
+  { value: "189", label: "Singapore" },
+  { value: "190", label: "Slovakia" },
+  { value: "191", label: "Slovenia" },
+  { value: "192", label: "Solomon Islands" },
+  { value: "193", label: "Somalia" },
+  { value: "194", label: "South Africa" },
+  { value: "195", label: "South Sudan" },
+  { value: "196", label: "Spain" },
+  { value: "197", label: "Sri Lanka" },
+  { value: "198", label: "Sudan" },
+  { value: "199", label: "Suriname" },
+  { value: "200", label: "Swaziland" },
+  { value: "201", label: "Sweden" },
+  { value: "202", label: "Switzerland" },
+  { value: "203", label: "Syria" },
+  { value: "204", label: "Taiwan" },
+  { value: "205", label: "Tajikistan" },
+  { value: "206", label: "Tanzania" },
+  { value: "207", label: "Thailand" },
+  { value: "208", label: "Timor-Leste" },
+  { value: "209", label: "Togo" },
+  { value: "210", label: "Tokelau" },
+  { value: "211", label: "Tonga" },
+  { value: "212", label: "Trinidad and Tobago" },
+  { value: "213", label: "Tunisia" },
+  { value: "214", label: "Turkey" },
+  { value: "215", label: "Turkmenistan" },
+  { value: "216", label: "Turks and Caicos Islands" },
+  { value: "217", label: "Tuvalu" },
+  { value: "218", label: "Uganda" },
+  { value: "219", label: "Ukraine" },
+  { value: "220", label: "United Arab Emirates" },
+  { value: "221", label: "United Kingdom" },
+  { value: "222", label: "United States" },
+  { value: "223", label: "Uruguay" },
+  { value: "224", label: "Uzbekistan" },
+  { value: "225", label: "Vanuatu" },
+  { value: "225", label: "Vatican City State" },
+  { value: "226", label: "Venezuela" },
+  { value: "227", label: "Vietnam" },
+  { value: "228", label: "Virgin Islands" },
+  { value: "229", label: "Wallis and Futuna Islands" },
+  { value: "230", label: "Western Sahara" },
+  { value: "231", label: "Yemen" },
+  { value: "232", label: "Zambia" },
+  { value: "233", label: "Zimbabwe" },
+];
+
+const variants = {
+  OutlineBluegray102: "bg-white_A700 border border-bluegray_102 border-solid",
+  FillWhiteA700: "bg-white_A700",
+  OutlineGray700: "bg-white_A700 border border-gray_700 border-solid",
+};
+const shapes = { RoundedBorder2: "rounded-radius2" };
+const sizes = {
+  sm: "lg:p-[4px] xl:p-[5px] p-[6px] 3xl:p-[7px]",
+  md: "lg:pb-[5px] xl:pb-[7px] pb-[8px] 3xl:pb-[9px] lg:pt-[10px] xl:pt-[13px] pt-[15px] 3xl:pt-[18px] lg:px-[5px] xl:px-[7px] px-[8px] 3xl:px-[9px]",
+};
+
+const SelectBox = React.forwardRef(
+  (
+    {
+      children,
+      placeholder = "Select",
+      className,
+      options = selectOptions,
+      isSearchable = true,
+      placeholderClassName = "",
+      isMulti = false,
+      onChange,
+      value,
+      errors = [],
+      indicator,
+      shape,
+      variant,
+      size,
+      ...restProps
+    },
+    ref
+  ) => {
+    const [selectedVal, setSelectedVal] = React.useState(value);
+
+    const handleChange = (data) => {
+      setSelectedVal(data);
+      if (isMulti) {
+        onChange?.(data?.map((d) => d.value) || []);
+      } else {
+        onChange?.(data?.value);
+      }
+    };
+    return (
+      <>
+        <Select
+          ref={ref}
+          options={options}
+          className={`${className} ${shapes[shape] || ""} ${
+            variants[variant] || ""
+          } ${sizes[size] || ""} common-select`}
+          placeholder={
+            <div className={placeholderClassName}>{placeholder}</div>
+          }
+          isSearchable={isSearchable}
+          isMulti={isMulti}
+          components={{
+            IndicatorSeparator: () => null,
+            ...(indicator && { DropdownIndicator: () => indicator }),
+          }}
+          value={selectedVal}
+          onChange={handleChange}
+          styles={{
+            container: (provided) => ({
+              ...provided,
+              zIndex: 0,
+            }),
+            control: (provided) => ({
+              ...provided,
+              backgroundColor: "transparent",
+              border: "0 !important",
+              boxShadow: "0 !important",
+              minHeight: "auto",
+              "&:hover": {
+                border: "0 !important",
+              },
+            }),
+            option: (provided, state) => ({
+              ...provided,
+              color: state.isSelected && "#000000",
+              backgroundColor: state.isSelected && "#CAD8D4",
+              "&:hover": { backgroundColor: "#0976B5", color: "#ffffff" },
+            }),
+            singleValue: (provided) => ({
+              ...provided,
+              color: "inherit",
+            }),
+            input: (provided) => ({
+              ...provided,
+              color: "inherit",
+              margin: "0",
+              padding: "0",
+              // height: "0",
+            }),
+            valueContainer: (provided) => ({
+              ...provided,
+              padding: "0",
+            }),
+            dropdownIndicator: (provided) => ({
+              ...provided,
+              paddingTop: "0px",
+              paddingBottom: "0px",
+            }),
+            clearIndicator: (provided) => ({
+              ...provided,
+              padding: "0",
+            }),
+            multiValue: (provided) => ({
+              ...provided,
+              margin: "0",
+            }),
+            multiValueLabel: (provided) => ({
+              ...provided,
+              padding: "0",
+            }),
+            menuPortal: (base) => ({ ...base, zIndex: 999999 }),
+          }}
+          menuPortalTarget={document.body}
+          closeMenuOnScroll={(event) => {
+            return event.target.id === "scrollContainer";
+          }}
+          {...restProps}
+        />
+        <ErrorMessage errors={errors} />
+        {children}
+      </>
+    );
+  }
+);
+
+SelectBox.propTypes = {
+  placeholder: PropTypes.string,
+  className: PropTypes.string,
+  options: PropTypes.array,
+  isSearchable: PropTypes.bool,
+  placeholderClassName: PropTypes.string,
+  isMulti: PropTypes.bool,
+  onChange: PropTypes.func,
+  value: PropTypes.string,
+  shape: PropTypes.oneOf(["RoundedBorder2"]),
+  variant: PropTypes.oneOf([
+    "OutlineBluegray102",
+    "FillWhiteA700",
+    "OutlineGray700",
+  ]),
+  size: PropTypes.oneOf(["sm", "md"]),
+};
+SelectBox.defaultProps = {
+  placeholder: "Select",
+  className: "",
+  isSearchable: false,
+  placeholderClassName: "",
+  isMulti: false,
+  value: "",
+  shape: "",
+  variant: "OutlineBluegray102",
+  size: "sm",
+  options: selectOptions,
+  onChange: () => {},
+};
+export { SelectBox };

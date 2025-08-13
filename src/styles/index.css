@@ -1,0 +1,504 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif !important;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.dhiwise-code,
+.dhiwise-navigation {
+  min-height: 100%;
+}
+.common-row {
+  flex-direction: row;
+  display: flex;
+}
+.common-column {
+  flex-direction: column;
+  display: flex;
+}
+.common-image {
+  max-width: 100%;
+}
+.common-stack {
+  position: relative;
+  flex-wrap: wrap;
+}
+.common-list {
+  display: grid;
+}
+.common-grid {
+  display: grid;
+  flex-flow: row wrap;
+  min-height: auto;
+}
+.common-button {
+  cursor: pointer;
+  outline: none;
+}
+.common-floating-button {
+  cursor: pointer;
+  outline: none;
+  position: fixed !important;
+}
+.common-pointer {
+  cursor: pointer;
+}
+.dhiwise-navigation {
+  padding: 20px;
+  background-color: #232323;
+}
+.dhiwise-navigation  {
+  color: white;
+}
+.dhiwise-navigation .headline {
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: white;
+}
+.dhiwise-navigation ul {
+  padding: 0;
+}
+.dhiwise-navigation ul li {
+  list-style: none;
+  margin-right: 20px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.dhiwise-navigation a {
+  color: #132cdc;
+}
+.common-pointer {
+  cursor: pointer;
+}
+table {
+  border-spacing: 0;
+}
+.common-select {
+  z-index: 10000;
+}
+.react-datepicker-popper {
+  z-index: 100000 !important;
+}
+.drawable-icon{
+  position: absolute;
+  margin: auto;
+  z-index: 1000;
+}
+.input-wrap{
+  position: relative;
+}
+option{
+  color: #000;
+}
+.table-wrap{
+  overflow: auto;
+}
+input:focus{
+  outline:none;
+}
+.ReactModal__Body--open{
+  overflow: hidden;
+}
+  .slider-indicator:first-child {
+    margin-left: 0;
+}
+
+.slider-indicator:last-child {
+margin-right: 0;
+}
+
+.rc-drawer-content-wrapper{
+  width: 100% !important;
+}
+.rc-drawer-right .rc-drawer-content-wrapper{
+  display: flex;
+  justify-content: flex-end;
+}
+.rc-drawer-left .rc-drawer-content-wrapper{
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+
+.app {
+  /* text-align: center; */
+  margin: 0 auto;
+  width: 100%;
+}
+
+.selected-date {
+  margin: 0 auto;
+}
+
+.times button {
+  display: block;
+  background-color: #6f48eb;
+  color: white;
+  margin-top: 5px;
+}
+
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+
+
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+/* react calendar */
+
+
+.react-calendar { 
+  width: 70%;
+  max-width: 100%;
+  background-color: rgb(255, 255, 255);
+  color: rgb(8, 8, 8);
+  font-family: sans-serif;
+  line-height: 2em;
+ }
+
+ .react-calendar__navigation button {
+  color: rgb(66,139,202);
+  min-width: 45px;
+  background:none;
+  font-size: 30px;
+  margin-top: 8px;
+  
+ }
+.button.react-calendar__navigation__label
+{
+  color: #428bca;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgb(66,139,202);
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+  font-family: 'Open Sans';
+  font-size: 14px;
+  color: #393939;
+  line-height: 1.5;
+  box-sizing: border-box;
+  position: relative;
+  min-height: 1px;
+  padding-right: 12px;
+  padding-left: 12px;
+  float: left;
+  width: 33.3333%;
+}
+
+.react-calendar__navigation__label__labelText,
+.react-calendar__navigation__label__labelText--{
+  color: #6fb3e0;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+  font-family: 'Open Sans';
+  font-size: 20px;
+  border:none;
+  box-sizing: border-box;
+  position: center;
+  min-height: 1px;
+  width: 33.3333%;
+ }
+.react-calendar__viewContainer{
+ 
+  line-height: 6;
+  color: #707070;
+}
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after,
+.react-calendar button {
+  margin: 0;
+  border: none;
+  outline: none;
+}
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+.react-calendar__navigation__arrow{
+  width: 10%;
+  height: 15px;
+}
+.react-calendar__navigation__prev-button{
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+  font-family: 'Open Sans';
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: normal;
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  display: inline-block;
+  color: #FFF!important;
+  text-shadow: 0 -1px 0 rgb(66,139,202)!important;
+  background-image: none!important;
+  box-shadow: none!important;
+  transition: all ease .15s;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 13px;
+  padding: 4px 9px;
+  line-height: 1.39;
+  height: 38px;
+  width: 38px;
+}
+.react-calendar__navigation {
+  display: flex;
+  height: 60px;
+  margin-bottom: 1em;
+}
+.react-calendar__navigation button {
+  min-width: 44px;
+  /* background: none; */
+}
+button.react-calendar__navigation__label{
+  width:10px;
+  height: 30px;
+  position: center;
+}
+.react-calendar__navigation button:enabled:focus {
+  background-color: #e6e6e6;
+  height: 15px;
+}
+.react-calendar__navigation button[disabled] {
+  background-color: #fdfdfd;
+}
+.react-calendar__month-view__weekdays {
+  -webkit-text-size-adjust: 100%;
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  border: 1px solid #66666633;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-weight: normal;
+  background: #f2f2f2;
+  background-image: linear-gradient(to bottom,#f8f8f8 0,#ececec 100%);
+  background-repeat: repeat-x;
+  
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: bold;
+  padding: calc(0.75em / 0.75) calc(0.5em / 0.75);
+}
+.react-calendar__month-view__days{
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 14px;
+  table-layout: auto;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  --animate-duration: 1s;
+  --animate-delay: 1s;
+  --animate-repeat: 1;
+  font-family: 'Open Sans';
+  color: #393939;
+  border-spacing: 0;
+  max-width: 100%;
+  background-color: transparent;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 0!important;
+  margin: 0 !important;
+ 
+}
+.react-calendar__month-view__days__day--weekend {
+  
+  /* color: #d10000; */
+  padding: 3em 2.5em;
+  color: rgb(7, 7, 7);
+}
+.react-calendar__month-view__days__day--neighboringMonth {
+  padding: 3em 2.5em;
+  color: rgb(14, 13, 13);
+}
+.react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 4em 2em;
+  border: 4px solid;
+  background: none;
+}
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #cec9c9;
+}
+.react-calendar__tile--now {
+  /* background: #ffff76; */
+  background-color: #6f48eb;
+}
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #ffffa9;
+  color: rgb(247, 8, 147);
+}
+.react-calendar__tile--hasActive {
+  background: #76baff;
+}
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #a9d4ff;
+}
+.react-calendar__tile--active {
+  background: #6f48eb;
+  color: black;
+}
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background: #87b87f;
+}
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #e6e6e6;
+}
+
+/* imageGrid */
+.imageGridContainer {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  margin-left: 4%; /* Move container away from the left border */
+  margin-right: 3%; /* Move container away from the right border */
+  margin-top: 4%;
+}
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 25px; /* Gap between images */
+  justify-items: center; /* Center the items horizontally within each grid cell */
+  align-items: center; /* Center the items vertically within each grid cell */
+}
+
+.column1 {
+  grid-column: 1; /* Position in the first column */
+}
+
+.column2 {
+  grid-column: 2; /* Position in the second column */
+}
+
+.imageItem {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 190px; /* Set a fixed height for the image item */
+  width: 210px;
+  border: 2px solid #ccc; /* Add a border around the image item */
+  border-radius: 4px; /* Add border radius to round the corners */
+}
+
+.image {
+  width: 100%; /* Make the image fill the container */
+  height: 100%; /* Make the image fill the container */
+  object-fit: cover; /* Maintain the aspect ratio and cover the container */
+}
+
+/* Additional styling for the images */
+.imageItem img {
+  max-width: 100%; /* Maximum width of the image */
+  max-height: 100%; /* Maximum height of the image */
+  width: auto; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Fit the image within the container while maintaining aspect ratio */
+}
+
+.removeButton {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 20px;
+  height: 20px;
+  background-color: grey;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  /* border: 2px solid #000;; */
+  /* border-color: rgb(87, 87, 87); */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  /* font-weight: bold; */
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.column {
+  flex: 1;
+}
+
+.my-custom-popover {
+  border: solid 1px hsla(0, 0%, 0%, 0.25);
+  background: hsla(0, 100%, 100%, 0.99);
+  font-size: 85%;
+}
+
+.my-custom-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+[data-reach-combobox-option] {
+  cursor: pointer;
+  margin: 0;
+  padding: 0.25rem 0.5rem;
+}
+
+[data-reach-combobox-option][aria-selected="true"] {
+  background: hsl(211, 10%, 95%);
+}
+
+[data-reach-combobox-option]:hover {
+  background: hsl(211, 10%, 92%);
+}
+
+[data-reach-combobox-option][aria-selected="true"]:hover {
+  background: hsl(211, 10%, 90%);
+}
+
+[data-suggested-value] {
+  font-weight: bold;
+}
+
+.ck-editor__editable {
+  height: 150px;
+}
+
+
+
+

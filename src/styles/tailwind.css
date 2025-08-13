@@ -1,0 +1,695 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Example styles for h1, h2, h3, and h4 tags */
+
+.styled-content h1 {
+  font-size: 3rem; 
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.styled-content h2 {
+  font-size: 2.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+
+.styled-content h3 {
+  font-size: 2rem; 
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.styled-content h4 {
+  font-size: 1.5rem; 
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-weight: bold;
+}
+
+.styled-content p {
+  font-size: 1rem; 
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+@media (min-width: 420px) {
+  .styled-content h1 {
+    font-size: 3rem; 
+  }
+
+  .styled-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .styled-content h3 {
+    font-size: 2rem;
+  }
+
+  .styled-content h4 {
+    font-size: 1.5rem;
+  }
+
+  .styled-content p {
+    font-size: 1.25rem; 
+  }
+}
+
+@media (min-width: 1281px) {
+  .styled-content h1 {
+    font-size: 2rem;
+  }
+
+  .styled-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .styled-content h3 {
+    font-size: 1.5rem;
+  }
+
+  .styled-content h4 {
+    font-size: 1.25rem;
+  }
+
+  .styled-content p {
+    font-size: 1rem; 
+  }
+}
+
+
+/* Targeting the input inside the custom-phone-input class */
+.custom-phone-input input {
+  border-radius: 40px;
+  /* Adjust the border radius as needed */
+  width: 900px;
+  /* Adjust the width as needed */
+  /* Add any additional styles here */
+}
+
+/* Target the button that contains the flag icon */
+.react-international-phone-country-selector-button {
+  width: 50px;
+  /* Adjust this width as necessary */
+}
+
+/* Make sure the flag image inside the button fits nicely */
+.react-international-phone-flag-emoji {
+  width: 100%;
+  /* This will make the image fill the button width */
+  height: auto;
+  /* This will maintain the image's aspect ratio */
+}
+
+
+.styled-content a {
+  color: #2E2EF1;
+}
+
+.styled-content li {
+  margin-bottom: 10px;
+}
+
+.styled-content ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.styled-content ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+
+
+.phone-input {
+  width: full;
+  /* Change from 790% to 790px */
+  padding: 1px;
+  /* Example padding value, adjust as needed */
+}
+
+@media (max-width: 768px) {
+  .phone-input {
+    width: full;
+  }
+}
+
+:root {
+  --primary-color: #f9f9fa;
+}
+
+/* Override default focus colors for tailwindcss-forms https://github.com/tailwindlabs/tailwindcss-forms */
+[type='text']:focus,
+[type='email']:focus,
+[type='url']:focus,
+[type='password']:focus,
+[type='number']:focus,
+[type='date']:focus,
+[type='search']:focus,
+[type='checkbox']:focus,
+[type='radio']:focus,
+[type="radio2"]:focus,
+[multiple]:focus,
+textarea:focus,
+select:focus {
+  --tw-ring-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.react-datepicker-wrapper .react-datepicker__input-container input {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  padding: 0px;
+}
+
+.react-datepicker__day.react-datepicker__day--keyboard-selected {
+  background: none;
+  color: black;
+}
+
+input:focus,
+textarea:focus {
+  outline: none !important;
+  outline-offset: 0 !important;
+  --tw-ring-offset-width: none !important;
+}
+
+li:focus-visible {
+  outline: none;
+}
+
+li:hover {
+  cursor: pointer;
+}
+
+.tab-panel--selected {
+  animation-name: tabPanel;
+  animation-duration: 300ms;
+  animation-timing-function: linear;
+}
+
+@keyframes tabPanel {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+/* Input style */
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-container label {
+  position: relative;
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.input-container input {
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+}
+
+.columneachpropertyw {
+  @apply font-normal font-ptsans not-italic text-black_900 w-[auto];
+}
+
+.Download {
+  @apply font-normal 3xl:ml-[10px] lg:ml-[6px] xl:ml-[8px] 2xl:ml-[9px] mt-[1px] not-italic text-black_900 w-[auto];
+}
+
+.columnid {
+  @apply font-normal lg:mt-[36px] xl:mt-[46px] 2xl:mt-[52px] 3xl:mt-[62px] not-italic text-black_900 w-[auto];
+}
+
+.rowid {
+  @apply font-bold mt-[1px] text-black_900 w-[auto];
+}
+
+.columnname {
+  @apply font-bold xl:ml-[10px] 2xl:ml-[12px] 3xl:ml-[14px] lg:ml-[8px] text-black_900 w-[auto];
+}
+
+.percentage {
+  @apply font-normal lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] not-italic text-gray_500 w-[auto];
+}
+
+.columnlocation {
+  @apply font-bold 2xl:ml-[11px] 3xl:ml-[13px] lg:ml-[7px] xl:ml-[9px] text-black_900 w-[auto];
+}
+
+.rowtelevision {
+  @apply font-normal leading-[normal] lg:ml-[4px] xl:ml-[5px] 2xl:ml-[6px] 3xl:ml-[7px] mt-[1px] not-italic text-black_900 w-[88%];
+}
+
+.columnarrivalsdepart {
+  @apply font-bold leading-[normal] text-black_900 w-[100%];
+}
+
+.rowsix {
+  @apply bg-indigo_900_c4 flex font-bold items-center lg:px-[3px] xl:px-[4px] 2xl:px-[5px] 3xl:px-[6px] rounded-radius50 text-white_A700 w-[20px];
+}
+
+.GroupSixtyNine {
+  @apply font-normal not-italic p-[0] xl:text-[10px] 2xl:text-[12px] 3xl:text-[14px] lg:text-[8px] text-black_900 w-[100%];
+}
+
+.rowlanguage {
+  @apply cursor-pointer 2xl:mt-[11px] 3xl:mt-[13px] lg:mt-[7px] xl:mt-[9px] text-white_A700_99 w-[auto];
+}
+
+.Properties {
+  @apply cursor-pointer font-normal lg:mt-[3px] xl:mt-[4px] 2xl:mt-[5px] 3xl:mt-[6px] not-italic text-white_A700_99 w-[auto];
+}
+
+.mdihomegroup {
+  @apply lg:h-[21px] xl:h-[26px] 2xl:h-[30px] 3xl:h-[35px] lg:w-[20px] xl:w-[25px] 2xl:w-[29px] 3xl:w-[34px];
+}
+
+.Account {
+  @apply cursor-pointer font-normal mt-[3px] not-italic text-white_A700_99 w-[auto];
+}
+
+.Firstlastname {
+  @apply font-normal not-italic text-black_900 w-[auto];
+}
+
+.GroupThirteen {
+  @apply font-normal not-italic p-[0] xl:text-[10px] 2xl:text-[12px] 3xl:text-[14px] lg:text-[8px] text-black_900 w-[100%];
+}
+
+.PrivacyandCoo {
+  @apply font-normal lg:ml-[10px] xl:ml-[13px] 2xl:ml-[15px] 3xl:ml-[18px] xl:mt-[12px] 2xl:mt-[14px] 3xl:mt-[16px] lg:mt-[9px] not-italic text-white_A700 w-[auto];
+}
+
+.listnameandlocati {
+  @apply bg-gray_50 items-center justify-center lg:p-[21px] xl:p-[26px] 2xl:p-[30px] 3xl:p-[36px] shadow-bs w-[100%];
+}
+
+.rownameandlocati {
+  @apply font-normal lg:ml-[31px] xl:ml-[39px] 2xl:ml-[44px] 3xl:ml-[52px] not-italic text-black_900 w-[auto];
+}
+
+.TikTokVerified {
+  @apply lg:h-[18px] xl:h-[22px] 2xl:h-[25px] 3xl:h-[29px] mb-[1px] lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] mr-[4px] w-[14%];
+}
+
+.rowpropertysetup {
+  @apply font-normal lg:ml-[41px] xl:ml-[51px] 2xl:ml-[58px] 3xl:ml-[69px] not-italic text-black_900 w-[auto];
+}
+
+.TikTokVerified_One {
+  @apply lg:h-[18px] xl:h-[22px] 2xl:h-[25px] 3xl:h-[29px] mb-[1px] lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] lg:mr-[12px] xl:mr-[16px] 2xl:mr-[18px] 3xl:mr-[21px] w-[14%];
+}
+
+.rowphotos {
+  @apply font-normal 3xl:ml-[102px] lg:ml-[60px] xl:ml-[75px] 2xl:ml-[85px] not-italic text-black_900 w-[auto];
+}
+
+.TikTokVerified_Two {
+  @apply lg:h-[18px] xl:h-[22px] 2xl:h-[25px] 3xl:h-[29px] mb-[1px] lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] lg:mr-[32px] xl:mr-[40px] 2xl:mr-[45px] 3xl:mr-[54px] w-[14%];
+}
+
+.availability {
+  @apply font-normal lg:ml-[14px] xl:ml-[17px] 2xl:ml-[20px] 3xl:ml-[24px] not-italic text-black_900 w-[auto];
+}
+
+.rowrecord {
+  @apply font-normal 3xl:mt-[10px] lg:mt-[6px] xl:mt-[8px] 2xl:mt-[9px] not-italic text-black_900;
+}
+
+.Record {
+  @apply lg:h-[21px] xl:h-[26px] 2xl:h-[30px] 3xl:h-[35px] w-[10%];
+}
+
+.Assoonasposs {
+  @apply font-normal leading-[normal] 3xl:mt-[10px] lg:mt-[6px] xl:mt-[8px] 2xl:mt-[9px] not-italic text-black_900 w-[36%];
+}
+
+.Round {
+  @apply lg:h-[21px] xl:h-[26px] 2xl:h-[30px] 3xl:h-[35px] lg:ml-[27px] xl:ml-[33px] 2xl:ml-[38px] 3xl:ml-[45px] w-[10%];
+}
+
+.Onaspecificd {
+  @apply font-normal 3xl:mt-[10px] lg:mt-[6px] xl:mt-[8px] 2xl:mt-[9px] not-italic text-black_900 w-[auto];
+}
+
+.Doyouwantto {
+  @apply font-bold lg:mt-[22px] xl:mt-[28px] 2xl:mt-[32px] 3xl:mt-[38px] text-black_900 w-[auto];
+}
+
+.columnyesillimpor {
+  @apply font-normal lg:ml-[5px] xl:ml-[7px] 2xl:ml-[8px] 3xl:ml-[9px] not-italic text-black_900 w-[auto];
+}
+
+.Round_One {
+  @apply lg:h-[21px] xl:h-[26px] 2xl:h-[30px] 3xl:h-[35px] w-[12%];
+}
+
+.Round_Two {
+  @apply lg:h-[21px] xl:h-[26px] 2xl:h-[30px] 3xl:h-[35px] w-[15%];
+}
+
+.ExpandArrow {
+  @apply absolute lg:h-[15px] xl:h-[18px] 2xl:h-[21px] 3xl:h-[25px] inset-[0] justify-center m-[auto] w-[26%];
+}
+
+.columnidea {
+  @apply font-normal leading-[normal] lg:ml-[12px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] lg:mt-[20px] xl:mt-[25px] 2xl:mt-[29px] 3xl:mt-[34px] not-italic text-black_900 w-[93%];
+}
+
+.rowidea {
+  @apply font-bold leading-[normal] lg:ml-[11px] xl:ml-[14px] 2xl:ml-[16px] 3xl:ml-[19px] mt-[1px] text-black_900 w-[78%];
+}
+
+.Idea {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.Multiply {
+  @apply lg:h-[25px] xl:h-[32px] 2xl:h-[36px] 3xl:h-[43px] lg:w-[24px] xl:w-[31px] 2xl:w-[35px] 3xl:w-[42px];
+}
+
+.user {
+  @apply absolute lg:h-[25px] xl:h-[32px] 2xl:h-[36px] 3xl:h-[43px] inset-y-[0] my-[auto] right-[3%] lg:w-[24px] xl:w-[31px] 2xl:w-[35px] 3xl:w-[42px];
+}
+
+.language {
+  @apply lg:mt-[5px] xl:mt-[7px] 2xl:mt-[8px] 3xl:mt-[9px] text-white_A700_99 w-[auto];
+}
+
+.columnnamesproperty {
+  @apply font-normal font-ptsanscaption lg:mr-[14px] xl:mr-[17px] 2xl:mr-[20px] 3xl:mr-[24px] lg:mt-[4px] xl:mt-[5px] 2xl:mt-[6px] 3xl:mt-[7px] text-white_A700 w-[auto];
+}
+
+.ArrowOne {
+  @apply xl:h-[1px] lg:h-[1px] 3xl:h-[2px] 2xl:h-[2px] lg:ml-[12px] xl:ml-[16px] 2xl:ml-[18px] 3xl:ml-[21px] w-[1%];
+}
+
+.minimize {
+  @apply lg:h-[17px] xl:h-[21px] 2xl:h-[24px] 3xl:h-[28px] lg:ml-[39px] xl:ml-[48px] 2xl:ml-[55px] 3xl:ml-[66px] 3xl:mt-[10px] lg:mt-[6px] xl:mt-[8px] 2xl:mt-[9px] w-[2%];
+}
+
+.Help {
+  @apply font-normal lg:ml-[36px] xl:ml-[45px] 2xl:ml-[51px] 3xl:ml-[61px] lg:mt-[10px] xl:mt-[13px] 2xl:mt-[15px] 3xl:mt-[18px] not-italic text-white_A700 w-[auto];
+}
+
+.question {
+  @apply lg:h-[27px] xl:h-[33px] 2xl:h-[38px] 3xl:h-[45px] lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] mt-[3px] w-[3%];
+}
+
+.user_One {
+  @apply lg:h-[25px] xl:h-[32px] 2xl:h-[36px] 3xl:h-[43px] lg:ml-[18px] xl:ml-[23px] 2xl:ml-[26px] 3xl:ml-[31px] mt-[4px] lg:w-[24px] xl:w-[31px] 2xl:w-[35px] 3xl:w-[42px];
+}
+
+.Step1 {
+  @apply font-normal lg:ml-[32px] xl:ml-[40px] 2xl:ml-[46px] 3xl:ml-[55px] not-italic text-black_900 w-[auto];
+}
+
+.checkmark {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] lg:ml-[3px] xl:ml-[4px] 2xl:ml-[5px] 3xl:ml-[6px] 2xl:mr-[10px] 3xl:mr-[12px] lg:mr-[7px] xl:mr-[8px] mt-[3px] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.Step2 {
+  @apply font-normal lg:mt-[23px] xl:mt-[29px] 2xl:mt-[33px] 3xl:mt-[39px] not-italic text-black_900 w-[auto];
+}
+
+.button {
+  @apply absolute lg:h-[13px] xl:h-[16px] 2xl:h-[18px] 3xl:h-[21px] inset-[0] justify-center m-[auto] w-[81%];
+}
+
+.One {
+  @apply absolute bottom-[2%] font-normal inset-x-[0] mx-[auto] not-italic text-black_900 w-[max-content];
+}
+
+.columntellusaboutt {
+  @apply font-normal mt-[4px] not-italic text-black_900 w-[auto];
+}
+
+.close2 {
+  @apply absolute 3xl:h-[10px] lg:h-[6px] xl:h-[8px] 2xl:h-[9px] inset-[0] justify-center m-[auto] lg:w-[5px] xl:w-[7px] 2xl:w-[8px] 3xl:w-[9px];
+}
+
+.iconradio {
+  @apply font-normal lg:ml-[5px] xl:ml-[7px] 2xl:ml-[8px] 3xl:ml-[9px] mt-[1px] not-italic text-black_900 w-[auto];
+}
+
+.refresh {
+  @apply lg:h-[12px] xl:h-[15px] 2xl:h-[17px] 3xl:h-[20px] lg:w-[11px] xl:w-[14px] 2xl:w-[16px] 3xl:w-[19px];
+}
+
+.iconradio1 {
+  @apply font-normal lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] mt-[3px] not-italic text-black_900 w-[auto];
+}
+
+.iconradio2 {
+  @apply font-normal lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] mt-[1px] not-italic text-black_900 w-[auto];
+}
+
+.iconradio3 {
+  @apply font-normal lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] not-italic text-black_900 w-[auto];
+}
+
+.arrowleft {
+  @apply absolute lg:h-[19px] xl:h-[24px] 2xl:h-[27px] 3xl:h-[32px] inset-[0] justify-center m-[auto] lg:w-[18px] xl:w-[23px] 2xl:w-[26px] 3xl:w-[31px];
+}
+
+.columnrectangleeight {
+  @apply font-normal xl:ml-[110px] 2xl:ml-[124px] 3xl:ml-[148px] lg:ml-[88px] lg:mt-[32px] xl:mt-[40px] 2xl:mt-[46px] 3xl:mt-[55px] not-italic text-black_900 w-[auto];
+}
+
+.Radio {
+  @apply lg:h-[16px] xl:h-[20px] 2xl:h-[23px] 3xl:h-[27px] lg:mt-[14px] xl:mt-[17px] 2xl:mt-[20px] 3xl:mt-[24px] w-[34%];
+}
+
+.No {
+  @apply lg:h-[16px] xl:h-[20px] 2xl:h-[23px] 3xl:h-[27px] w-[32%];
+}
+
+.Whattypeofbr {
+  @apply font-bold font-ptsans text-black_900 w-[auto];
+}
+
+.Selectallthat {
+  @apply font-normal font-ptsanscaption mt-[3px] text-gray_500 w-[auto];
+}
+
+.arrowleft1 {
+  @apply absolute lg:h-[10px] xl:h-[13px] 2xl:h-[15px] 3xl:h-[17px] inset-[0] justify-center m-[auto] w-[9%];
+}
+
+.rowdescription {
+  @apply font-light leading-[normal] lg:mt-[16px] xl:mt-[20px] 2xl:mt-[23px] 3xl:mt-[27px] text-black_900 w-[84%];
+}
+
+.rowdescription2 {
+  @apply font-normal leading-[normal] lg:mt-[19px] xl:mt-[24px] 2xl:mt-[27px] 3xl:mt-[32px] not-italic text-black_900 w-[83%];
+}
+
+.Airbnb {
+  @apply font-normal 2xl:ml-[11px] 3xl:ml-[13px] lg:ml-[7px] xl:ml-[9px] not-italic text-black_900 w-[auto];
+}
+
+.TripAdvisor {
+  @apply font-normal mb-[1px] 2xl:ml-[11px] 3xl:ml-[13px] lg:ml-[7px] xl:ml-[9px] lg:mt-[3px] xl:mt-[4px] 2xl:mt-[5px] 3xl:mt-[6px] not-italic text-black_900 w-[auto];
+}
+
+.weburl_Two {
+  @apply font-normal mt-[4px] not-italic text-gray_500 w-[auto];
+}
+
+.columnnameandlocati {
+  @apply font-normal not-italic text-gray_700 w-[auto];
+}
+
+.Maincard {
+  @apply font-normal lg:mt-[12px] xl:mt-[16px] 2xl:mt-[18px] 3xl:mt-[21px] not-italic text-black_900 w-[auto];
+}
+
+.rowlightbulb {
+  @apply font-bold leading-[normal] 2xl:mt-[11px] 3xl:mt-[13px] lg:mt-[7px] xl:mt-[9px] text-black_900 w-[66%];
+}
+
+.lightbulb {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] lg:mt-[4px] xl:mt-[5px] 2xl:mt-[6px] 3xl:mt-[7px] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.close_One1 {
+  @apply lg:h-[17px] xl:h-[21px] 2xl:h-[24px] 3xl:h-[28px] lg:w-[16px] xl:w-[20px] 2xl:w-[23px] 3xl:w-[27px];
+}
+
+.GroupSixtyFour {
+  @apply font-normal not-italic p-[0] xl:text-[12px] 2xl:text-[14px] 3xl:text-[16px] lg:text-[9px] text-bluegray_400 w-[100%];
+}
+
+.Thingstoconsi {
+  @apply font-normal leading-[normal] not-italic text-black_900 w-[100%];
+}
+
+.Airconditionin {
+  @apply font-normal lg:ml-[4px] xl:ml-[6px] 2xl:ml-[7px] 3xl:ml-[8px] mt-[2px] not-italic text-black_900 w-[auto];
+}
+
+.Vector1 {
+  @apply absolute lg:h-[3px] xl:h-[4px] 3xl:h-[5px] 2xl:h-[5px] inset-[0] justify-center m-[auto] w-[53%];
+}
+
+.Hottub {
+  @apply font-normal lg:ml-[4px] xl:ml-[5px] 2xl:ml-[6px] 3xl:ml-[7px] mt-[1px] not-italic text-black_900 w-[auto];
+}
+
+.Smoking {
+  @apply font-normal mt-[2px] not-italic text-black_900 w-[auto];
+}
+
+.Pets {
+  @apply font-normal mt-[1px] not-italic text-black_900 w-[auto];
+}
+
+.Property {
+  @apply font-normal mb-[2px] lg:ml-[10px] xl:ml-[13px] 2xl:ml-[15px] 3xl:ml-[18px] lg:mt-[4px] xl:mt-[5px] 2xl:mt-[6px] 3xl:mt-[7px] not-italic text-black_900 w-[auto];
+}
+
+.Step21 {
+  @apply font-normal lg:ml-[43px] xl:ml-[54px] 2xl:ml-[61px] 3xl:ml-[73px] not-italic text-black_900 w-[auto];
+}
+
+.Step3 {
+  @apply font-normal lg:mt-[20px] xl:mt-[25px] 2xl:mt-[29px] 3xl:mt-[34px] not-italic text-black_900 w-[auto];
+}
+
+.Step4 {
+  @apply font-normal lg:ml-[29px] xl:ml-[36px] 2xl:ml-[41px] 3xl:ml-[49px] not-italic text-black_900 w-[auto];
+}
+
+.combochartico {
+  @apply lg:h-[23px] xl:h-[28px] 2xl:h-[32px] 3xl:h-[38px] w-[14%];
+}
+
+.arrowleft2 {
+  @apply absolute lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] inset-[0] justify-center m-[auto] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.close_One3 {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] lg:ml-[180px] xl:ml-[225px] 2xl:ml-[254px] 3xl:ml-[304px] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.columndescription_two {
+  @apply font-normal leading-[normal] ml-[4px] not-italic text-black_900 w-[98%];
+}
+
+.Step11 {
+  @apply font-normal lg:ml-[32px] xl:ml-[40px] 2xl:ml-[45px] 3xl:ml-[54px] not-italic text-black_900 w-[auto];
+}
+
+.checkmark2 {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] ml-[4px] 2xl:mr-[10px] 3xl:mr-[12px] lg:mr-[7px] xl:mr-[8px] mt-[1px] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.Step22 {
+  @apply font-normal lg:ml-[42px] xl:ml-[53px] 2xl:ml-[60px] 3xl:ml-[72px] not-italic text-black_900 w-[auto];
+}
+
+.checkmark_One1 {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] lg:ml-[3px] xl:ml-[4px] 2xl:ml-[5px] 3xl:ml-[6px] lg:mr-[16px] xl:mr-[20px] 2xl:mr-[23px] 3xl:mr-[27px] mt-[1px] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.Step31 {
+  @apply font-normal 3xl:ml-[104px] lg:ml-[61px] xl:ml-[77px] 2xl:ml-[87px] not-italic text-black_900 w-[auto];
+}
+
+.checkmark_Two {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] lg:ml-[3px] xl:ml-[4px] 2xl:ml-[5px] 3xl:ml-[6px] lg:mr-[35px] xl:mr-[44px] 2xl:mr-[50px] 3xl:mr-[60px] mt-[1px] lg:w-[21px] xl:w-[26px] 2xl:w-[30px] 3xl:w-[36px];
+}
+
+.rowround {
+  @apply font-normal 3xl:ml-[10px] lg:ml-[6px] xl:ml-[8px] 2xl:ml-[9px] not-italic text-black_900 w-[auto];
+}
+
+.Maestro {
+  @apply font-normal 2xl:ml-[10px] 3xl:ml-[12px] lg:ml-[7px] xl:ml-[8px] mt-[3px] not-italic text-black_900 w-[auto];
+}
+
+.rowcancellationpo {
+  @apply font-bold mt-[4px] text-black_900 w-[auto];
+}
+
+.Checkmark {
+  @apply lg:h-[22px] xl:h-[27px] 2xl:h-[31px] 3xl:h-[37px] w-[7%];
+}
+
+.rowround_two1 {
+  @apply font-normal mb-[4px] 3xl:ml-[10px] lg:ml-[6px] xl:ml-[8px] 2xl:ml-[9px] 3xl:mt-[10px] lg:mt-[6px] xl:mt-[8px] 2xl:mt-[9px] not-italic text-black_900 w-[auto];
+}
+
+.Round_Two1 {
+  @apply lg:h-[21px] xl:h-[26px] 2xl:h-[30px] 3xl:h-[35px] w-[9%];
+}
+
+.rowrecord_one {
+  @apply font-normal leading-[normal] lg:mb-[3px] xl:mb-[4px] 2xl:mb-[5px] 3xl:mb-[6px] 3xl:ml-[10px] lg:ml-[6px] xl:ml-[8px] 2xl:ml-[9px] 3xl:mt-[10px] lg:mt-[6px] xl:mt-[8px] 2xl:mt-[9px] not-italic text-black_900 w-[85%];
+}
+
+.listcar {
+  @apply bg-white_A700 items-center lg:my-[25px] xl:my-[32px] 2xl:my-[36px] 3xl:my-[43px] xl:p-[12px] 2xl:p-[14px] 3xl:p-[16px] lg:p-[9px] w-[100%];
+}
+
+.car {
+  @apply lg:h-[29px] xl:h-[36px] 2xl:h-[41px] 3xl:h-[49px] 2xl:ml-[10px] 3xl:ml-[12px] lg:ml-[7px] xl:ml-[8px] lg:w-[28px] xl:w-[35px] 2xl:w-[40px] 3xl:w-[48px];
+}
+
+.columndoublebed {
+  @apply font-normal mt-[2px] text-gray_500 w-[auto];
+}
+
+.columnextralargedou {
+  @apply font-normal lg:mt-[4px] xl:mt-[6px] 2xl:mt-[7px] 3xl:mt-[8px] text-gray_500 w-[auto];
+}
+
+.Sofa {
+  @apply font-normal leading-[normal] text-black_900 w-[100%];
+}
+
+.Moreoption {
+  @apply font-normal lg:ml-[4px] xl:ml-[5px] 2xl:ml-[6px] 3xl:ml-[7px] mt-[1px] not-italic text-light_blue_800 w-[auto];
+}
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #F1F1F1;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #C1C1C1;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888787;
+}

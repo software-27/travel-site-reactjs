@@ -1,0 +1,40 @@
+.ck-editor__editable {
+  height: 500px !important;
+}
+
+.ck-editor__editable {
+  height: 500px !important;
+}
+
+/* Style for CKEditor Bullet List */
+.ck-editor__editable ul {
+  list-style-type: disc; 
+  margin-left: 20px; 
+}
+
+
+.ck-editor__editable ol {
+  list-style-type: decimal; 
+  margin-left: 20px; 
+}
+
+
+.ck-editor__editable li {
+  margin-bottom: 5px;
+}
+
+
+
+@import '../../../../node_modules/@syncfusion/ej2-richtexteditor/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-react-richtexteditor/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-base/styles/material.css';
+
+
+@import '../../../../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../../../../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../../../../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../../../../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../../../../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../../../../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+  

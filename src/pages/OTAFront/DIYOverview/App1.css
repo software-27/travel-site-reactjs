@@ -1,0 +1,106 @@
+.App {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #EAEBEF;
+  }
+  .dotted-line {
+    width: 0;
+   
+    height: 80px;
+    border-left: none;
+    position: relative;
+  }
+  
+  .dotted-line::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1.5px;
+    height: 100%;
+    background-image: linear-gradient(#008009 33%, transparent 0);
+    background-position: 0 0;
+    background-size: 5px 10px;
+  }
+
+  .dotted-line1 {
+    width: 0;
+   
+    height: 340px;
+    border-left: none;
+    position: relative;
+  }
+  
+  .dotted-line1::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3.5px;
+    height: 100%;
+    background-image: linear-gradient(#008009 33%, transparent 0);
+    background-position: 0 0;
+    background-size: 5px 20px;
+  }
+  
+  .grid {
+    display: grid;
+    justify-content: center;
+  }
+  
+  .p-2 {
+    
+    justify-content: center;
+  }
+  /* Hide all list items by default when the screen width is less than 600px */
+  @media (max-width: 599px) {
+    .list-item {
+      width: 100%;
+    }
+  }
+  .full-width {
+    width: 100%;
+  }
+  .scrollable-list {
+    display: flex;
+   
+    overflow-x: scroll;
+   
+    height: 600px;
+    
+    width: 100%;
+    padding: 10px;
+    background-color: #EAEBEF;
+  
+    /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  
+    /* Hide scrollbar for Firefox */
+    scrollbar-width: none;
+  
+    /* Hide scrollbar for Internet Explorer and Edge */
+    -ms-overflow-style: none;
+  }
+  
+  .list-item {
+    flex: 0 0 200px;
+    height: 100%;
+    margin-right: 10px;
+    padding: 20px;
+    background-color: #EAEBEF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+  }
+  
+  .list-item:last-child {
+    margin-right: 0;
+  }

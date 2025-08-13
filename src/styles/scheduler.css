@@ -1,0 +1,133 @@
+
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment:nth-child(3n+1) {
+  background: rgba(230, 184, 183, 0.8); /* Pastel Pink */
+}
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment:first-child {
+  background: rgba(230, 184, 183, 0.8); /* Pastel Pink */
+}
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment:nth-child(3n+2) {
+  background: rgba(185, 221, 209, 0.8); /* Pastel Green */
+}
+
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment:nth-child(3n+3) {
+  background: rgba(209, 202, 232, 0.8); /* Pastel Purple */
+}
+
+
+.day-header {
+    text-align: center;
+    font-size: 14px;
+    text-transform: lowercase;
+    font-family: "Montserrat", sans-serif;
+}
+.vertical {
+  border-left: 1px solid black;
+  height: 20px; /* Adjust the height as needed */
+  margin: 0 auto;
+  margin-top:10px;
+  margin-bottom:4px;
+}
+.date-header {
+    text-align: center;
+    font-size: 34px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+}
+.scheduler-container {
+  margin: 30px;
+  /* position: relative; */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.e-schedule .e-date-header-wrap .e-schedule-table thead {
+  display: none;
+}
+
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment .e-appointment-details {
+  color: #3a3a3a; /* Change the text color to red */
+  font-family: "Poppins", sans-serif;
+  margin-left:4px
+}
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment {
+  border-radius: 10px; /* Add a rounded border with a radius of 5 pixels */
+}
+
+.e-schedule .e-vertical-view .e-day-wrapper .e-appointment .e-subject {
+  font-weight: 600; /* Set the font weight to semibold (600) */
+  padding-bottom:1px;
+}
+
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(98, 98, 98, 0.6);
+  z-index: 9999;
+}
+
+.overlay-content {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  background-color: #fff;
+  width: 55%;
+}
+.overlay-close{
+  position: fixed;
+  right: 20px;
+  top:40px;
+  width:30px;
+  height:30px;
+}
+
+
+
+.schedule-border-customization.e-schedule .e-vertical-view .e-date-header-wrap table tbody td,
+
+.schedule-border-customization.e-schedule .e-vertical-view .e-left-indent-wrap table tbody td,
+
+.schedule-border-customization.e-schedule .e-vertical-view .e-time-cells-wrap table td {
+  border-color: #fff;
+}
+
+.schedule-border-customization.e-schedule .e-vertical-view .e-work-cells {
+  border-color: #e9e4df #fff;
+}
+
+.schedule-border-customization.e-schedule {
+   border: 1px solid #fff;
+}
+
+.schedule-border-customization.e-schedule .e-vertical-view .e-time-cells-wrap .e-time-cells {
+  border-bottom-color: #fff;
+}
+
+
+.schedule-border-customization.e-schedule .e-vertical-view .e-date-header-container {
+  border-bottom: 1px solid;
+  border-color: #e9e4df #fff;
+}
+
+
+.schedule-border-customization.e-schedule .e-vertical-view .e-date-header-wrap.e-all-day-auto {
+  border: unset;
+}
+
+.add-lunch-button {
+  margin-left: 50px; /* Add your desired margin-left value */
+
+}
+.add-activity-button {
+  margin-left: 10px; /* Add your desired margin-left value */
+
+}

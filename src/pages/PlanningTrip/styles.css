@@ -1,0 +1,21 @@
+input {
+    border: 2px solid #ccc; /* default border color */
+  }
+  
+  input.clicked {
+    border-color: blue; /* new border color when input is clicked */
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200;
+  }
+  .rounded-datepicker {
+    border-radius: 10px;
+  }
+  .rounded-div {
+    border-radius: 1px; /* Adjust the value as needed */
+    border: 1px solid rgba(0, 0, 0, 0.534); /* Add a border to the div element */
+    padding: 10px; /* Add some padding to the div element */
+  }

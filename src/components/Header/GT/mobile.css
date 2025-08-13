@@ -1,0 +1,68 @@
+.custom-selectt {
+    position: relative;
+    display: inline-block;
+    width: 40%;
+  }
+  
+  .custom-selectt select {
+    appearance: none; /* Remove default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 22px; /* Default font size for larger screens */
+    line-height: 1.5;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Make it fully rounded */
+    background-color: #fff;
+    background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%);
+    background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+  }
+  
+  .custom-selectt select:focus {
+    outline: none;
+    border-color: #008a00;
+  }
+  
+  .custom-selectt select option.custom-option {
+    padding: 10px;
+    color: #575757; /* Text color */
+  }
+  
+  .custom-selectt select option.custom-option:hover,
+  .custom-selectt select option.custom-option:focus {
+    background-color: #f7f7fa; /* Hover/focus background color */
+  }
+  
+  .custom-option {
+    background-color: #f7f7fa;
+    color: #222;
+    font-size: 35px; /* Default font size for larger screens */
+    padding: 20px 20px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+  }
+  
+  .custom-option:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .custom-option:active {
+    background-color: #eee;
+  }
+  
+  .custom-option:disabled {
+    opacity: 0.5;
+  }
+  
+  .custom-option.selected {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  
+  
+  

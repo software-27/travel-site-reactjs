@@ -1,0 +1,11 @@
+
+  "scripts": {
+    "start": "env-cmd -f .env.local react-scripts start",
+    "start:max": "env-cmd -f .env.local react-scripts --max_old_space_size=4096 start",
+    "build": "react-scripts build",
+    "build:max": "env-cmd -f .env.production react-scripts --max_old_space_size=4096 build",
+    "build:max:stage": "env-cmd -f .env.staging react-scripts --max_old_space_size=4096 build",
+    "build:max:prod": "env-cmd -f .env.production react-scripts --max_old_space_size=4096 build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },

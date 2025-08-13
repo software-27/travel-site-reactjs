@@ -1,0 +1,39 @@
+/* Default button style */
+.bookmark-button {
+    background-color: white;
+    color: #45B9B4; /* Assuming #45B9B4 is the original color of the text */
+    border: 2px solid #45B9B4;
+    border-radius: 9999px; /* For rounded corners */
+    padding: 6px 16px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s; /* Smooth transition */
+    font-weight: bold;
+  }
+  
+  /* Hover and Active button style */
+ 
+  .bookmark-button.active {
+    background-color: #00A19A;
+    color: white;
+    border-color: #00A19A;
+  }
+  
+  /* Styles specific to the icon */
+  .icon {
+    /* your icon styles here */
+  }
+  
+  /* Styles for text when active */
+  .bookmark-button.active .text {
+    color: white;
+  }
+  
+ 
+  /* Common pointer style */
+  .common-pointer {
+    cursor: pointer;
+  }
+  

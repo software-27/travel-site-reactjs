@@ -1,0 +1,51 @@
+/* Styles for larger screens (web) */
+.loader-container3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 40vh;
+  /* Full viewport width */
+  position: absolute; /* Add relative positioning */
+}
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-top: 4px solid #00A19A;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #00A19A;
+}
+
+/* Styles for smaller screens (e.g., mobile devices) */
+@media (max-width: 767px) {
+  .loader-container {
+    height: 100vh; /* Use full viewport height on mobile */
+    justify-content: flex-start; /* Align content to the top */
+    align-items: flex-start; /* Align items to the top */
+    position: fixed; /* Add fixed positioning */
+    top: 0;
+    margin-left: 10vh;
+  }
+
+  .loader {
+    width: 30px;
+    height: 30px;
+  }
+
+  .loading-text {
+    font-size: 16px;
+  }
+}

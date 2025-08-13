@@ -1,0 +1,107 @@
+input {
+  border: 2px solid #ccc; /* default border color */
+}
+
+input.clicked {
+  border-color: blue; /* new border color when input is clicked */
+}
+.no-border {
+  border: none;
+}
+.input-zoom {
+  transform: scale(1.2);
+  /* Add any other styles you want for the zoom effect */
+}
+.input-container {
+  resize: none;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+/* styles.css or your preferred styling method */
+#your-custom-portal-id {
+  border: none;
+  width: 400% !important;
+}
+
+
+.custom-calendar-class {
+  transform: scale(1.5);
+  transform-origin: top left; /* Optional: Adjust the transform origin as needed */
+}
+
+
+.custom-datepicker {
+  font-size: 0.7em !important;
+}
+
+.react-datepicker__current-month {
+  font-size: 1.5em !important;
+}
+
+.react-datepicker__header {
+  padding-top: 6px !important;
+}
+
+.react-datepicker__navigation {
+  top: 13px !important;
+}
+
+
+.react-datepicker {
+  font-size: 1em;
+}
+.react-datepicker__header {
+  padding-top: 0.8em;
+}
+.react-datepicker__month {
+  margin: 0.4em 1em;
+}
+.react-datepicker_day-name, .react-datepicker_day {
+  width: 1em;
+  line-height: 1em;
+  margin: 0.8em 1em
+}
+.react-datepicker__current-month {
+  font-size: 1em;
+}
+.react-datepicker__navigation {
+  top: 1em;
+  line-height: 1.7em;
+  border: 0.45em solid transparent;
+}
+/* .react-datepicker__navigation--previous {
+  border-right-color: #ccc;
+  left: 1em;
+}
+.react-datepicker__navigation--next {
+  border-left-color: #ccc;
+  right: 1em;
+} */
+
+@keyframes blink-caret {
+  from, to { border-color: transparent; }
+  50% { border-color: black; }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200;
+}
+.rounded-datepicker {
+  border-radius: 10px;
+}
+.rounded-div {
+  border-radius: 1px; /* Adjust the value as needed */
+  border: 1px solid rgba(0, 0, 0, 0.534); /* Add a border to the div element */
+  padding: 10px; /* Add some padding to the div element */
+}
+
+html{
+  scroll-behavior: smooth;
+}
+.custom-input {
+  caret-color: black; /* Replace 'pink' with your desired color */
+  /* width: 10px; */
+}

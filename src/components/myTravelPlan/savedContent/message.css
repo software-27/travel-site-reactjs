@@ -1,0 +1,42 @@
+/* Add this CSS to your stylesheet or component */
+.success-message {
+    position: fixed;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    z-index: 999; /* Adjust the z-index as needed */
+  }
+
+  .message-line:first-child {
+    font-weight: bold; /* Make the first line bold */
+  }
+  .message-line {
+    margin-bottom: 10px; /* Add spacing between lines */
+  }
+
+  .message-line a {
+    text-decoration: underline; /* Underline the link */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 17px; /* Adjust the top value to position the button vertically */
+    right: 15px; /* Adjust the right value to position the button horizontally */
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #888;
+  }
+  
+  .close-button:hover {
+    color: rgb(178, 178, 178);
+  }
+  
+  
+  /* Add styles for the rest of your component as needed */
+  

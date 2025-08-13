@@ -1,0 +1,66 @@
+.border-custom-dashed {
+  border-style: dashed;
+  /* Set border style to dashed */
+  border-width: 1px;
+  /* Set the border width (dash size) */
+  border-spacing: 10px;
+  /* Set the margin to control the spacing */
+}
+
+
+@media (max-width: 1000px) {
+  .toast-message {
+    font-size: 32px;
+    padding: 30px 20px;
+  }
+
+  /** Used to position the icon **/
+  .Toastify__toast-icon {
+    height: 40px;
+    width: 40px;
+    padding-right: 10px;
+  }
+
+  .loading-spinner {
+    width: 70px;
+    /* Adjust the width to your desired size */
+    height: 70px;
+    /* Adjust the height to your desired size */
+    /* Other styling properties for your spinner */
+  }
+}
+
+/* Add CSS media query for print */
+@media print {
+
+  /* Define print-specific styles */
+  body {
+    width: 11in;
+    /* Adjust to your desired width */
+    height: auto;
+    /* Adjust to your desired height */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-lg .lg\:no-print {
+    display: none;
+  }
+
+  #divToPrint {
+    background: none !important;
+    /* Additional fallback to remove any background colors or images */
+  }
+
+}
+
+
+.hide-for-pdf {
+  display: none;
+}

@@ -1,0 +1,32 @@
+/* Center the loader container vertically and horizontally */
+.loader-container5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 64vh;
+  width: 180vh; /* Full viewport width */
+}
+
+/* Style for the round loading spinner */
+.loader {
+  border: 4px solid rgba(255, 255, 255, 0.3); /* White with some opacity */
+  border-top: 4px solid #00A19A; /* Blue color */
+  border-radius: 50%; /* Create a circle */
+  width: 40px;
+  height: 40px;
+  animation: spin 2s linear infinite; /* Rotate animation */
+}
+
+/* Keyframes animation for spinning */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Style for the loading text */
+.loading-text {
+  margin-top: 10px; /* Add some space between spinner and text */
+  font-size: 18px; /* Adjust font size as needed */
+  color: #00A19A; /* Blue color */
+}

@@ -1,0 +1,69 @@
+.ck-editor__editable {
+  height: auto ;
+}
+
+/* Add this CSS to your stylesheet or component */
+.success-message {
+position: fixed;
+top: 15%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: white;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+z-index: 999; /* Adjust the z-index as needed */
+}
+
+.message-line:first-child {
+font-weight: bold; /* Make the first line bold */
+}
+.message-line {
+margin-bottom: 10px; /* Add spacing between lines */
+}
+
+.message-line a {
+text-decoration: underline; /* Underline the link */
+}
+
+.close-button {
+position: absolute;
+top: 17px; /* Adjust the top value to position the button vertically */
+right: 15px; /* Adjust the right value to position the button horizontally */
+background-color: transparent;
+border: none;
+cursor: pointer;
+font-size: 16px;
+color: #888;
+}
+
+.close-button:hover {
+color: rgb(178, 178, 178);
+}
+
+/* styles.css */
+.input-field::placeholder {
+color: #adadad; /* Change this to the desired placeholder color */
+}
+
+
+/* Custom styles for small screens (max-width: 768px) */
+@media (max-width: 1000px) {
+.toast-message {
+  font-size: 32px;
+  padding: 30px 20px;
+}
+
+ /** Used to position the icon **/
+ .Toastify__toast-icon {
+  height: 40px;
+  width: 40px;
+  padding-right: 10px;
+}
+
+.Toastify__toast-container--top-right {
+  width: 55vw;
+}
+}
+
+/* Add styles for the rest of your component as needed */
